@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="img/logo.svg" alt="foxminded"></a>
+        </header>
+        <div class="location">
+            <input type="text" data-search-box placeholder="Enter city">
+            <p>Celected: <span data-selected-location></span></p>
+            <ul class="cities-list" data-cities>
+                <li class="hidden" data-city-name>Kharkiv, Ukraine</li>
+                <li class="hidden" data-city-name>Tokyo, Japan</li>
+                <li class="hidden" data-city-name>Madrid, Spain</li>
+                <li class="hidden" data-city-name>Denpasar, Indonesia</li>
+                <li class="hidden" data-city-name>Toronto, Canada</li>
+                <li class="hidden" data-city-name>Chicago, USA</li>
+                <li class="hidden" data-city-name>Miami, USA</li>
+                <li class="hidden" data-city-name>Dublin, Ireland</li>
+            </ul>
+        </div>
+        <div class="current-weather">
+            <div class="current-temp">
+                <p class="current-day-temp"><span data-current-day-temp></span>&degC</p>
+                <p class="current-night-desc"><span data-current-night-desc-temp></span>&degC</p>
+            </div>
+            <div class="current-desc">
+                <p data-current-desc></p>
+                <p data-location></p>
+            </div>
+            <div class="current-icons">
+                <img class="main-icon" src="img/fox.svg" alt="foxminded">
+                <img class="day-icon" src="" alt="day icon" data-current-day-icon>
+                <img class="night-icon" src="" alt="night icon" data-current-night-icon>
+            </div>
+        </div>
+
+        <section class="day-section" data-day-section>
+        </section>
+        <template id="day-card-template">
+            <div class="day-card" data-card-day>
+                <div class="name-of-day">
+                    <span data-day-of-week></span>
+                </div>
+                <div class="day-icons">
+                    <img class="main-icon" src="img/fox.svg" alt="foxminded">
+                    <img class="day-icon" src="" alt="" data-day-icon>
+                    <img class="night-icon" src="" alt="" data-night-icon>
+                </div>
+                <div class="day-desc">
+                    <span data-day-desc></span>
+                </div>
+                <div class="day-temp">
+                    <div>Day</div>
+                    <p><span data-day-temp></span>&degC</p>
+                    <p><span data-night-temp></span>&degC</p>
+                    <div>Night</div>
+                </div>
+            </div>
+        </template>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

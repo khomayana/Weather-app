@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+p,
+div,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", "Arial", 'Helvetica Neue', Helvetica, sans-serif;
+    font: normal 400 14px/1.2 Roboto;
+}
+
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    padding: 35px 0 27px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 14px 0 14px 14px;
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.location {
+    position: relative;
+}
+
+.location p {
+    padding: 7px 0 7px 14px;
+    color: #676767;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.cities-list {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+    transform: translate(0, -7%);
+}
+
+.hidden {
+    display: none;
+}
+
+.cities-list li {
+    list-style: none;
+    color: #474646;
+    padding: 10px 10px;
+}
+
+.cities-list li:hover {
+    background-color: #FF4F00;
+    color: #fff;
+}
+
+.current-weather {
+    margin-bottom: 27px;
+    padding: 12px 42px 12px 10px;
+    background: #FF4F00;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-temp {
+    margin-right: 30px;
+    text-align: end;
+}
+
+.current-desc {
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 1.458;
+    text-align: center;
+}
+
+.current-desc p:first-child {
+    font-weight: 500;
+}
+
+.current-day-temp {
+    font-size: 54px;
+    font-weight: 700;
+    letter-spacing: -3.24px;
+}
+
+.current-night-desc span {
+    font-size: 17px;
+}
+
+.current-icons {
+    position: relative;
+}
+
+.current-weather-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(11%, 5%);
+}
+
+.day-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    border-top: 1px solid #DDDDDD;
+}
+
+.name-of-day span {
+    font-size: 17px;
+}
+
+
+.day-icons {
+    position: relative;
+}
+
+.main-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.day-icon,
+.night-icon {
+    position: absolute;
+}
+
+.day-icon {
+    top: 0;
+    right: 0;
+    transform: translate(57%, 13%);
+    width: 60px;
+    height: 60px;
+}
+
+.night-icon {
+    top: 0;
+    left: 0;
+    transform: translate(-44%, -31%);
+    width: 60px;
+    height: 60px;
+}
+
+.day-temp {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: end;
+    /* justify-content: space-between; */
+}
+
+.day-temp div {
+    font-size: 9px;
+}
+
+.day-temp span {
+    font-weight: 500;
+}
+
+/* [data-card-day] {
+    display: none;
+} */
